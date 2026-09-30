@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Computational Biology Society</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--abyss:#060a14;--panel:#0b1220;--edge:#1b2740;--ice:#a9d6ff;--cyan:#4fc3ff;--dim:#7186a8;--film:#dfe6ee}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--abyss);color:var(--ice);font:16px/1.66 "IBM Plex Sans",-apple-system,sans-serif;overflow-x:hidden}
+.mono{font-family:"IBM Plex Mono",monospace}
+nav{display:flex;justify-content:space-between;align-items:center;max-width:1080px;margin:0 auto;padding:22px 28px;position:relative;z-index:8}
+.wordmark{display:flex;align-items:center;gap:12px;color:#fff;font-weight:600;letter-spacing:-.01em;text-decoration:none}
+.wordmark svg{width:34px;height:34px}
+nav .links{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.16em}
+nav .links a{margin-left:22px;color:var(--dim);text-decoration:none}
+nav .links a:hover{color:var(--ice)}
+nav .links a.here{color:var(--cyan)}
+.heroZone{position:relative}
+.hero{position:relative;height:88vh;overflow:hidden;display:flex;align-items:center;border-bottom:1px solid var(--edge)}
+.bgimg{position:absolute;inset:-6%;background:url("refs/pinref_3.jpg") center/cover no-repeat;filter:grayscale(1) brightness(.5) contrast(1.15) sepia(1) hue-rotate(182deg) saturate(2.2);opacity:.34;animation:drift 36s ease-in-out infinite alternate;will-change:transform}
+@keyframes drift{from{transform:scale(1) translate(0,0)}to{transform:scale(1.09) translate(-1.6%,1.2%)}}
+.vignette{position:absolute;inset:0;background:radial-gradient(ellipse at 38% 46%,transparent 30%,rgba(6,10,20,.88) 82%),linear-gradient(180deg,rgba(6,10,20,.25),rgba(6,10,20,.94) 92%)}
+.nerves{position:absolute;inset:0;width:100%;height:100%;will-change:transform}
+.copy{position:relative;z-index:6;max-width:1080px;margin:0 auto;padding:0 28px;width:100%}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.24em;color:var(--cyan)}
+h1{font-size:clamp(40px,5.6vw,72px);font-weight:300;line-height:1.08;letter-spacing:-.01em;margin:16px 0 18px;background:linear-gradient(115deg,#f0f5fb 25%,#a9d6ff 85%);-webkit-background-clip:text;background-clip:text;color:transparent}
+h1 .thin{font-weight:200}
+.sub{color:var(--dim);max-width:54ch;font-size:17px}
+.cta{display:inline-block;margin-top:26px;font-family:"IBM Plex Mono",monospace;font-size:13px;letter-spacing:.14em;color:var(--abyss);background:var(--cyan);padding:13px 26px;font-weight:600;text-decoration:none}
+.datastrip{position:absolute;left:28px;bottom:24px;z-index:6;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.16em;color:var(--dim)}
+.datastrip b{color:var(--cyan);font-weight:500}
+main{max-width:1080px;margin:0 auto;padding:0 28px 90px;position:relative;z-index:2}
+section{padding:80px 0 8px}
+h2{font-size:clamp(21px,2.6vw,28px);font-weight:400;color:#d7e5f4;margin-bottom:10px}
+.note{color:var(--dim);max-width:66ch}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:30px}
+.card{background:var(--panel);border:1px solid var(--edge);padding:26px 28px}
+.card .k{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.18em;color:var(--cyan)}
+.card h3{font-size:17px;font-weight:500;color:#e6eef8;margin:8px 0 8px}
+.card p{color:var(--dim);font-size:14.5px}
+.sched{margin-top:30px;border-top:1px solid var(--edge)}
+.sched .row{display:flex;gap:22px;border-bottom:1px solid var(--edge);padding:15px 2px;align-items:baseline}
+.sched .d{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.14em;color:var(--cyan);white-space:nowrap;min-width:110px}
+.sched .t{color:var(--ice);font-size:15px}
+.sched .s{margin-left:auto;font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.14em;color:var(--dim);white-space:nowrap}
+.morelink{display:inline-block;margin-top:18px;font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.16em;color:var(--cyan);text-decoration:none}
+.filmband{position:relative;height:44vh;overflow:hidden;border-top:1px solid var(--edge);border-bottom:1px solid var(--edge);margin-top:70px}
+.filmband .img{position:absolute;inset:-14% 0;background:url("refs/pinref_1.jpg") center 30%/cover no-repeat;filter:grayscale(1) brightness(.72) contrast(1.1) sepia(1) hue-rotate(182deg) saturate(2.0);will-change:transform}
+.filmband .label{position:absolute;left:28px;bottom:20px;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.18em;color:var(--film);text-shadow:0 1px 8px rgba(6,10,20,.9)}
+.join{position:relative;overflow:hidden;margin-top:70px;background:#04070d;border:1px solid var(--cyan);padding:44px 34px;display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between}
+.join .octbg{position:absolute;inset:0;background:url("refs/oct_macula.png") center 42%/cover no-repeat;opacity:.26;filter:sepia(1) hue-rotate(175deg) saturate(2.4) brightness(.95);pointer-events:none;-webkit-mask-image:linear-gradient(90deg,rgba(0,0,0,.35),rgba(0,0,0,1) 45%,rgba(0,0,0,.55));mask-image:linear-gradient(90deg,rgba(0,0,0,.35),rgba(0,0,0,1) 45%,rgba(0,0,0,.55))}
+.join>div,.join>a{position:relative;z-index:1}
+.join h2{font-size:20px;font-weight:500}
+.join p{color:var(--dim);font-size:14.5px;max-width:52ch}
+footer{border-top:1px solid var(--edge);padding:32px 28px;text-align:center;color:var(--dim);font-size:12.5px}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){.bgimg{animation:none}.reveal{opacity:1;transform:none}.nerveLayer{transform:none!important}.filmband .img{transform:none!important}}
+</style>
+</head>
+<body>
+
+<nav>
+<a class="wordmark" href="index.html"><svg viewBox="0 0 200 200"><line x1="18" y1="100" x2="182" y2="100" stroke="#4fc3ff" stroke-width="4" opacity=".55"/><path d="M 20 100 C 33 58 47 58 60 100 C 69 128 81 128 90 100" fill="none" stroke="#a9d6ff" stroke-width="9" stroke-linecap="round"/><g stroke="#a9d6ff" stroke-width="5"><line x1="100" y1="100" x2="100" y2="73"/><line x1="110" y1="100" x2="110" y2="66"/><line x1="120" y1="100" x2="120" y2="85"/><line x1="130" y1="100" x2="130" y2="115"/><line x1="140" y1="100" x2="140" y2="134"/><line x1="150" y1="100" x2="150" y2="127"/><line x1="170" y1="100" x2="170" y2="73"/></g><g fill="#4fc3ff"><circle cx="100" cy="73" r="7"/><circle cx="110" cy="66" r="7"/><circle cx="120" cy="85" r="7"/><circle cx="130" cy="115" r="7"/><circle cx="140" cy="134" r="7"/><circle cx="150" cy="127" r="7"/><circle cx="160" cy="100" r="5"/><circle cx="170" cy="73" r="7"/></g></svg>Computational Biology Society</a>
+<div class="links"><a href="projects.html">PROJECTS</a><a href="events.html">EVENTS</a><a href="opportunities.html">OPPORTUNITIES</a><a href="founder.html">FOUNDERS</a><a href="join.html">JOIN</a></div>
+</nav>
+
+<div class="heroZone">
+<div class="hero">
+<div class="bgimg" data-speed="0.12"></div>
+<div class="vignette"></div>
+
+<svg class="nerves" data-speed="0.3" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMid slice" fill="none" opacity=".5">
+<g class="grow" stroke="#4b6d99" stroke-width="1.6">
+<path d="M -20 160 C 220 200 380 140 560 190 C 720 235 840 180 1000 220 C 1130 252 1260 220 1460 260"/>
+<path d="M 560 190 C 620 120 720 90 830 100 C 930 108 1010 70 1090 84"/>
+<path d="M 1000 220 C 1050 300 1140 340 1250 330"/>
+</g>
+</svg>
+
+<svg class="nerves" data-speed="0.55" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMid slice" fill="none">
+<g class="grow" stroke="#a9d6ff" stroke-width="2.4">
+<path id="n1" d="M -20 430 C 170 392 320 306 470 336 C 566 355 646 306 736 326"/>
+<path id="n1b" d="M 470 336 C 522 264 588 222 668 210"/>
+<path id="n1c" d="M 470 336 C 506 406 566 444 648 464"/>
+<path id="n2" d="M -20 624 C 200 646 340 564 520 602 C 700 642 826 566 986 604"/>
+<path id="n2b" d="M 520 602 C 562 520 644 498 726 510"/>
+<path id="n3" d="M 1460 262 C 1280 302 1152 262 1022 322 C 932 362 862 342 802 384"/>
+<path id="n3b" d="M 1022 322 C 982 242 902 210 822 222"/>
+<path id="n3c" d="M 1152 268 C 1180 350 1252 396 1348 402"/>
+</g>
+<g class="tips" fill="#4fc3ff">
+<circle data-for="n1" cx="736" cy="326" r="6"/>
+<circle data-for="n1b" cx="668" cy="210" r="5"/>
+<circle data-for="n1c" cx="648" cy="464" r="5"/>
+<circle data-for="n2" cx="986" cy="604" r="6"/>
+<circle data-for="n2b" cx="726" cy="510" r="5"/>
+<circle data-for="n3" cx="802" cy="384" r="6"/>
+<circle data-for="n3b" cx="822" cy="222" r="5"/>
+<circle data-for="n3c" cx="1348" cy="402" r="5"/>
+</g>
+</svg>
+<div class="copy">
+<div class="eyebrow">COMPUTATIONAL BIOLOGY SOCIETY · LOS ANGELES VALLEY COLLEGE</div>
+<h1>Sequence,<br><span class="thin">together.</span></h1>
+<p class="sub">A student society at the intersection of biology and computing. We build hands-on bioinformatics and medical-imaging mini-projects, support one another in finding and joining real research, and navigate the transfer path together. No coding experience required.</p>
+<a class="cta" href="join.html">JOIN · $10 ASO FEE</a>
+</div>
+<div class="datastrip">EST <b>2026</b> · CHARTER <b>SEP 24</b> · MEETS <b>1st &amp; 3rd TUE 18:30</b> · HYBRID</div>
+</div>
+
+</div>
+
+<main>
+<section class="reveal">
+<div class="eyebrow">WHAT WE DO</div>
+<h2>One club, three engines</h2>
+<div class="cards">
+<div class="card"><div class="k">COMMUNAL PROJECTS</div><h3>Build one thing, together</h3><p>Each semester the club votes on one communal project, an open-dataset bioinformatics build or a medical-imaging analysis, structured so every member contributes at their own skill level, with visible artifacts by semester's end.</p></div>
+<div class="card"><div class="k">RESEARCH ENTRY</div><h3>Get into real research</h3><p>Getting into research alone is the hard way. We pool entry points (faculty projects, campus programs, volunteer roles) and prep each other's applications as a group.</p></div>
+<div class="card"><div class="k">TRANSFER NAVIGATION</div><h3>Map the path out</h3><p>UCLA Computational &amp; Systems Biology, UC bioinformatics majors, articulation on ASSIST: we chart the coursework and deadlines together.</p></div>
+</div>
+</section>
+
+<section class="reveal">
+<div class="eyebrow">THIS FALL</div>
+<h2>The semester ahead</h2>
+<div class="sched">
+<div class="row"><span class="d">SEP 24 THU</span><span class="t">ICC chartering vote — officers at the Skybox, 1:00 PM</span><span class="s">ASU CALENDAR</span></div>
+<div class="row"><span class="d">OCT 06 TUE</span><span class="t">Kickoff &amp; communal-project vote — first general meeting, 6:30 PM, hybrid</span><span class="s">PENDING CHARTER</span></div>
+<div class="row"><span class="d">OCT 20 TUE</span><span class="t">Club Day table — Student Union Plaza, 11 AM–2 PM, live project demo</span><span class="s">PENDING CHARTER</span></div>
+<div class="row"><span class="d">1st &amp; 3rd TUE</span><span class="t">Project nights — small groups advance the communal build, 6:30–7:30 PM</span><span class="s">ONGOING</span></div>
+</div>
+<a class="morelink" href="events.html">FULL CALENDAR →</a>
+</section>
+</main>
+
+<div class="filmband">
+<div class="img" data-speed="0.22"></div>
+<div class="label">THROUGH THE EYEPIECE · BIOLOGY IS ALREADY DATA</div>
+</div>
+
+<main style="padding-bottom:0">
+<div class="join reveal" id="join">
+<div class="octbg"></div>
+<div><h2>Sequence, together.</h2>
+<p>Founding membership is the $10 ASO fee you'd pay to join any Valley club. First ten members are founders, on the record.</p></div>
+<a class="cta" style="margin-top:0" href="join.html">JOIN THE FIRST TEN</a>
+</div>
+</main>
+
+<footer><span class="mono">COMPUTATIONAL BIOLOGY SOCIETY · LOS ANGELES VALLEY COLLEGE · FALL 2026</span></footer>
+
+<script>
+(function(){
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var paths=document.querySelectorAll('.grow path');
+  var tips=document.querySelectorAll('.tips circle');
+  tips.forEach(function(t){t.style.opacity=reduce?1:0;t.style.transition='opacity .6s ease'});
+  if(!reduce){
+    var delay=300;
+    paths.forEach(function(p){
+      var L=p.getTotalLength();
+      p.style.strokeDasharray=L;
+      p.style.strokeDashoffset=L;
+      var a=p.animate([{strokeDashoffset:L},{strokeDashoffset:0}],{duration:Math.max(900,L*1.5),delay:delay,easing:'cubic-bezier(.25,.1,.25,1)',fill:'forwards'});
+      a.onfinish=function(){tips.forEach(function(t){if(t.dataset.for===p.id)t.style.opacity=1;});};
+      delay+=260;
+    });
+  }
+  var layers=document.querySelectorAll('.nerves,.bgimg,.filmband .img');
+  function onScroll(){
+    if(reduce)return;
+    var y=window.scrollY;
+    layers.forEach(function(l){
+      var s=parseFloat(l.dataset.speed);
+      l.style.translate='0 '+(y*s*-0.5)+'px';
+    });
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)e.target.classList.add('in');});},{threshold:0.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects · Computational Biology Society</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--abyss:#060a14;--panel:#0b1220;--edge:#1b2740;--ice:#a9d6ff;--cyan:#4fc3ff;--dim:#7186a8;--film:#dfe6ee}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--abyss);color:var(--ice);font:16px/1.66 "IBM Plex Sans",-apple-system,sans-serif;overflow-x:hidden}
+.mono{font-family:"IBM Plex Mono",monospace}
+nav{display:flex;justify-content:space-between;align-items:center;max-width:1080px;margin:0 auto;padding:22px 28px}
+.wordmark{display:flex;align-items:center;gap:12px;color:#fff;font-weight:600;text-decoration:none}
+.wordmark svg{width:34px;height:34px}
+nav .links{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.16em}
+nav .links a{margin-left:22px;color:var(--dim);text-decoration:none}
+nav .links a:hover{color:var(--ice)}
+nav .links a.here{color:var(--cyan)}
+header.page{position:relative;overflow:hidden;border-top:1px solid var(--edge);border-bottom:1px solid var(--edge);padding:74px 0 58px;background:linear-gradient(180deg,#081022,var(--abyss))}
+.hbg{position:absolute;inset:0;background:url("refs/hdr_em.jpg") center 35%/cover no-repeat;opacity:.13;filter:grayscale(1) sepia(1) hue-rotate(180deg) saturate(1.9) brightness(.85);pointer-events:none}
+header.page .inner{position:relative;z-index:1}
+header.page .inner,main{max-width:1080px;margin:0 auto;padding:0 28px}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.24em;color:var(--cyan)}
+h1{font-size:clamp(30px,4.2vw,50px);font-weight:300;letter-spacing:-.01em;margin:12px 0 12px;background:linear-gradient(115deg,#f0f5fb 25%,#a9d6ff 85%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lede{color:var(--dim);max-width:60ch;font-size:16.5px}
+main{padding-bottom:90px}
+section{padding:64px 0 8px}
+h2{font-size:clamp(19px,2.4vw,25px);font-weight:400;color:#d7e5f4;margin-bottom:10px}
+.note{color:var(--dim);max-width:66ch}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:28px}
+.card{background:var(--panel);border:1px solid var(--edge);padding:26px 28px}
+.card .k{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.18em;color:var(--cyan)}
+.card h3{font-size:17px;font-weight:500;color:#e6eef8;margin:8px 0 8px}
+.card p{color:var(--dim);font-size:14.5px}
+.rules{margin-top:26px;background:var(--panel);border:1px solid var(--edge);padding:24px 28px}
+.rules li{margin:8px 0 8px 22px;color:var(--ice);font-size:15px}
+.rules b{color:#fff}
+.filmband{position:relative;height:38vh;overflow:hidden;border-top:1px solid var(--edge);border-bottom:1px solid var(--edge);margin-top:70px}
+.filmband .img{position:absolute;inset:-14% 0;background:url("refs/band_fa.jpg") center 45%/cover no-repeat;filter:grayscale(1) brightness(.72) contrast(1.12) sepia(1) hue-rotate(182deg) saturate(2.0)}
+.filmband .label{position:absolute;left:28px;bottom:18px;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.18em;color:var(--film);text-shadow:0 1px 8px rgba(6,10,20,.9)}
+.join{position:relative;overflow:hidden;margin-top:70px;background:#04070d;border:1px solid var(--cyan);padding:38px 32px;display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between}
+.join .octbg{position:absolute;inset:0;background:url("refs/oct_macula.png") center 42%/cover no-repeat;opacity:.22;filter:sepia(1) hue-rotate(175deg) saturate(2.4) brightness(.95);pointer-events:none}
+.join>div,.join>a{position:relative;z-index:1}
+.join h2{font-weight:500;font-size:19px}
+.join p{color:var(--dim);font-size:14px;max-width:52ch}
+.cta{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:13px;letter-spacing:.14em;color:var(--abyss);background:var(--cyan);padding:13px 26px;font-weight:600;text-decoration:none;white-space:nowrap}
+footer{border-top:1px solid var(--edge);padding:32px 28px;text-align:center;color:var(--dim);font-size:12.5px}
+</style>
+</head>
+<body>
+
+<nav>
+<a class="wordmark" href="index.html"><svg viewBox="0 0 200 200"><line x1="18" y1="100" x2="182" y2="100" stroke="#4fc3ff" stroke-width="4" opacity=".55"/><path d="M 20 100 C 33 58 47 58 60 100 C 69 128 81 128 90 100" fill="none" stroke="#a9d6ff" stroke-width="9" stroke-linecap="round"/><g stroke="#a9d6ff" stroke-width="5"><line x1="100" y1="100" x2="100" y2="73"/><line x1="110" y1="100" x2="110" y2="66"/><line x1="120" y1="100" x2="120" y2="85"/><line x1="130" y1="100" x2="130" y2="115"/><line x1="140" y1="100" x2="140" y2="134"/><line x1="150" y1="100" x2="150" y2="127"/><line x1="170" y1="100" x2="170" y2="73"/></g><g fill="#4fc3ff"><circle cx="100" cy="73" r="7"/><circle cx="110" cy="66" r="7"/><circle cx="120" cy="85" r="7"/><circle cx="130" cy="115" r="7"/><circle cx="140" cy="134" r="7"/><circle cx="150" cy="127" r="7"/><circle cx="160" cy="100" r="5"/><circle cx="170" cy="73" r="7"/></g></svg>Computational Biology Society</a>
+<div class="links"><a class="here" href="projects.html">PROJECTS</a><a href="events.html">EVENTS</a><a href="opportunities.html">OPPORTUNITIES</a><a href="founder.html">FOUNDERS</a><a href="join.html">JOIN</a></div>
+</nav>
+
+<header class="page"><div class="hbg"></div><div class="inner">
+<div class="eyebrow">PROJECTS</div>
+<h1>One project a semester. Everyone builds.</h1>
+<p class="lede">The club's center of gravity is a single communal project, chosen by member vote at the kickoff meeting, scoped so that every skill level has real work: data wrangling, annotation, analysis, visualization, writing. No coding experience required to contribute; plenty of room to learn it along the way.</p>
+</div></header>
+
+<main>
+<section>
+<div class="eyebrow">FALL 2026 BALLOT</div>
+<h2>Candidate directions</h2>
+<p class="note">The founding cohort votes at the kickoff meeting. Members can also propose their own direction, and the strongest proposal wins regardless of this list.</p>
+<div class="cards">
+<div class="card"><div class="k">CANDIDATE A</div><h3>Open-dataset bioinformatics build</h3><p>Work a public genomic or protein dataset into a documented group analysis: sequence puzzles first, a real pipeline by December. Beginner-friendly on-ramp through structured problem sets.</p></div>
+<div class="card"><div class="k">CANDIDATE B</div><h3>Medical-imaging analysis</h3><p>Explore a public retinal or medical-imaging dataset as a group: what the images show, how they become measurements, and what simple computation can pull out of them.</p></div>
+<div class="card"><div class="k">CANDIDATE C</div><h3>Member proposal</h3><p>Bring the idea you have been carrying around. If the room votes for it, the club builds it. Proposals take five minutes at kickoff: what, why, and what a beginner could contribute.</p></div>
+</div>
+</section>
+
+<section>
+<div class="eyebrow">HOW IT RUNS</div>
+<h2>Project rules</h2>
+<div class="rules"><ul>
+<li><b>Every skill level contributes.</b> Tasks are scoped in tiers, from labeling and documentation to analysis code.</li>
+<li><b>Everything documented.</b> The build is open to all members; the semester ends with a visible artifact each contributor can point to.</li>
+<li><b>Project nights carry it.</b> First and third Tuesday, 6:30–7:30 PM, hybrid; small groups advance the build between meetings at their own pace.</li>
+</ul></div>
+</section>
+
+<div class="filmband"><div class="img"></div><div class="label">RETINAL ANGIOGRAM · WHAT IMAGING TURNS INTO DATA</div></div>
+
+<div class="join">
+<div class="octbg"></div>
+<div><h2>Vote on the first build</h2><p>Kickoff and project vote happen at the first general meeting after chartering. Founding members set the club's first direction.</p></div>
+<a class="cta" href="join.html">JOIN THE FIRST TEN</a>
+</div>
+</main>
+
+<footer><span class="mono">COMPUTATIONAL BIOLOGY SOCIETY · LOS ANGELES VALLEY COLLEGE · FALL 2026</span></footer>
+</body>
+</html>
