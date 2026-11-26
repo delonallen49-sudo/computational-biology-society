@@ -46,6 +46,10 @@ h2{font-size:clamp(21px,2.6vw,28px);font-weight:400;color:#d7e5f4;margin-bottom:
 .sched .d{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.14em;color:var(--cyan);white-space:nowrap;min-width:110px}
 .sched .t{color:var(--ice);font-size:15px}
 .sched .s{margin-left:auto;font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.14em;color:var(--dim);white-space:nowrap}
+.sched .row.now{background:rgba(79,195,255,.07)}
+.sched .row.now .d,.sched .row.now .s{color:var(--cyan)}
+.sched .row.now .t{color:#fff}
+.sched .row.now .t b{font-weight:600}
 .morelink{display:inline-block;margin-top:18px;font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.16em;color:var(--cyan);text-decoration:none}
 .filmband{position:relative;height:44vh;overflow:hidden;border-top:1px solid var(--edge);border-bottom:1px solid var(--edge);margin-top:70px}
 .filmband .img{position:absolute;inset:-14% 0;background:url("refs/pinref_1.jpg") center 30%/cover no-repeat;filter:grayscale(1) brightness(.72) contrast(1.1) sepia(1) hue-rotate(182deg) saturate(2.0);will-change:transform}
@@ -129,6 +133,7 @@ footer{border-top:1px solid var(--edge);padding:32px 28px;text-align:center;colo
 <div class="eyebrow">THIS FALL</div>
 <h2>The semester ahead</h2>
 <div class="sched">
+<div class="row now"><span class="d">NOV 25 WED</span><span class="t"><b>General meeting tonight</b> — 7:00–8:00 PM, online. Everyone welcome, members and anyone curious. <a href="https://meet.google.com/esu-qgyb-zqv" style="color:var(--cyan)">Join on Google Meet →</a></span><span class="s">TONIGHT · 7 PM</span></div>
 <div class="row"><span class="d">SEP 24 THU</span><span class="t">ICC chartering vote — officers at the Skybox, 1:00 PM</span><span class="s">ASU CALENDAR</span></div>
 <div class="row"><span class="d">OCT 06 TUE</span><span class="t">Kickoff &amp; communal-project vote — first general meeting, 6:30 PM, hybrid</span><span class="s">PENDING CHARTER</span></div>
 <div class="row"><span class="d">OCT 20 TUE</span><span class="t">Club Day table — Student Union Plaza, 11 AM–2 PM, live project demo</span><span class="s">PENDING CHARTER</span></div>
